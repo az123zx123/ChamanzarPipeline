@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'ChamanzarPipeline'
+copyright = '2023, Chamanzar Group, CMU. All rights reserved'
+author = 'Xiang Li'
 
 release = '0.1'
 version = '0.1.0'
@@ -19,6 +19,13 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_copybutton',
 ]
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'restructuredtext',
+    '.md': 'markdown',
+}
+
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
