@@ -17,10 +17,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-<<<<<<< Updated upstream
-=======
     'sphinx_copybutton',
->>>>>>> Stashed changes
 ]
 
 intersphinx_mapping = {
