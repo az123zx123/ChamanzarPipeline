@@ -27,7 +27,6 @@ will raise an exception.
 .. autoexception:: lumache.InvalidKindError
 
 For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+.. code-block:: bash
+   from google.colab import drive
+   drive.mount('/content/drive', force_remount=True)
