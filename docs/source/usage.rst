@@ -1,32 +1,10 @@
 Usage
 =====
-
-.. _installation:
-
-Installation
-------------
-
-To use Lumache, first install it using pip:
-
-.. code-block:: console
-
-   (.venv) $ pip install lumache
-
-Creating recipes
-----------------
-
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
+Connecting files
+-------------------
+The tutorial is based on Google colab. The first step is connecting Google Drive to a Google Colab Notebook.
 For example:
-.. code-block:: bash
+
+.. code-block:: Python
    from google.colab import drive
    drive.mount('/content/drive', force_remount=True)
