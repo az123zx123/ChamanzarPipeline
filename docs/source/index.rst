@@ -5,7 +5,7 @@ ChamanzarPipeline is the pipeline used by `Chamanzar lab <https://www.chamanzarl
 and offers a *simple* and *intuitive* API.
 
 Check out the :doc:`usage` section for further information, including
-how to :ref:`Connecting files` the project.
+how to :ref:`Connecting` the project.
 
 .. note::
 
