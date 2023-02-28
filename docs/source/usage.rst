@@ -39,6 +39,7 @@ First we need to install third-party libraries:
    The spikeinterface version in this example is outdated.
 
 Then we import spikeinterface (0.13).
+
 .. code-block::
 
    import spikeinterface as si
@@ -62,6 +63,7 @@ Next we import other related libraries.
    import sys
 
 Finally, we import our own libraries
+
 .. code-block::
 
    #setup to import our own custom libraries
