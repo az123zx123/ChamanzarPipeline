@@ -18,7 +18,7 @@ Contents
    about
    usage
    api
-
+   maintenance
 Other resources
 ---------------
 The following additional resources can be useful for spike sorting:

@@ -91,11 +91,18 @@ Finally, we import our own libraries
 
 Load dataset
 -------------
+
+.. note::
+
+   This part is adapted from `document<https://docs.google.com/document/d/1ORTekIBW8jfAY2d3LeadNTPgP2iLAiqHvzxm37mait0/edit>`_ written by Jay
+
+
 The parameters of dataset is stored in `chamLabRecordingVariables.xlsx <https://drive.google.com/drive/folders/1fpUvxR17hc5CaAnXwgyjzDOEguGLr4Bh?usp=sharing>`_.
 The following is an example of loading one dataset. :code:`dataInd` is the index into the spike sorting variables sheet that you have recently edited. :code:`Filedir` must be set to the target sheet. The remaining variables are sorting parameters. 
 The final two lines, :code:`dataObj.loadMountainSort()` and :code:`dataObj.loadVariables()` performs the filtering and spike sorting and loads the results into memory. These can take a long time to execute on the first time for a given dataset. However, the results are cached and can be quickly loaded into memory once the operation has been run once. 
 
 .. code-block::
+
    dataInd = 121
    spikeProminence = 10
    sortingThreshold = 4
@@ -112,14 +119,11 @@ The final two lines, :code:`dataObj.loadMountainSort()` and :code:`dataObj.loadV
    dataObj.loadMountainSort(overide = False)
    dataObj.loadVariables(overide = False)
 
-.. note::
-
-   We are using Mountainsort as default spike sorting method.
-
 Processing and visualizations
 -----------------------------
 The pipeline is based on `SpikeInterface <https://spikeinterface.readthedocs.io/en/latest/>`_ framework. spikeinterface has implemented some useful processing and visualizations.
 .. code-block::
+
    sw.plot_unit_waveforms(sorting=dataObj.sorting_MS4, 
                            recording=dataObj.recording,
                            unit_ids=[1,2,3], 
@@ -127,6 +131,8 @@ The pipeline is based on `SpikeInterface <https://spikeinterface.readthedocs.io/
 
 We also implement our version of processing and visualizations
 .. code-block::
+
    dataObj.visualize("waveforms", version = "original", overide = False) #unit wavesforms
    dataObj.visualize("isi", version = "original", overide = True, binsize = 30)
+
 
