@@ -12,6 +12,8 @@ For example:
    from google.colab import drive
    drive.mount('/content/drive', force_remount=True)
 
+Select permit, account and allow for the pop-up window.
+
 Dependency
 ----------
 .. note::
@@ -135,4 +137,33 @@ We also implement our version of processing and visualizations
    dataObj.visualize("waveforms", version = "original", overide = False) #unit wavesforms
    dataObj.visualize("isi", version = "original", overide = True, binsize = 30)
 
+Some GUI-based processing and visualizations are available. 
+To enable the custom GUI functions, some additional libraries should be installed.
+.. code-block::
+   !pip install ipympl
+   !pip install ipyfilechooser
+   import xianglib as xl
+
+In order to select multiple items, Hold down the control key and select.
+
+To show the templates, waveforms of units: The first column is unit list, second column is channel list and the last dropdown select template and waveform.
+.. code-block::
+   xl.waveform_widget(dataObj)
+
+To plot the autocorrelation and crosscorrelation of units: The first is unit list, bin size and window size are in the unit of second(s). The last dropdown select autocorrelation and crosscorrelation.  
+.. code-block::
+   xl.correlation_widget(dataObj)
+
+To show the PCA of units: Select units, and use the slider to select channels for each axis. The dropdown corresponds to which principal component will be plot. A common practice is selecting the maximum channels and order as 1, 2, 3 principal components.
+.. code-block::
+   xl.pca_analysis(dataObj)
+
+To show the raster plot, ISI and histogram of units:
+.. code-block::
+   xl.histogram_widget(dataObj)
+
+Connectome analysis
+-------------------
+.. note::
+   This is an experimental function and could result in run out of memory error. Please stop the process if not updated for more than 10 mins.
 
