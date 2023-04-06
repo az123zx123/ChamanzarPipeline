@@ -160,8 +160,10 @@ To show the templates, waveforms of units: The first column is unit list, second
 .. code-block::
    xl.waveform_widget(dataObj)
 
+The GUI looks like:
+
 .. image:: fig/waveform_widget.png
-  :width: 400
+  :width: 600
   :alt: waveform widget
 
 To plot the autocorrelation and crosscorrelation of units: The first is unit list, bin size and window size are in the unit of second(s). The last dropdown select autocorrelation and crosscorrelation.  
@@ -169,8 +171,10 @@ To plot the autocorrelation and crosscorrelation of units: The first is unit lis
 .. code-block::
    xl.correlation_widget(dataObj)
 
+The GUI looks like:
+
 .. image:: fig/cross_widget.png
-  :width: 400
+  :width: 600
   :alt: correlation widget
 
 To show the PCA of units: Select units, and use the slider to select channels for each axis. The dropdown corresponds to which principal component will be plot. A common practice is selecting the maximum channels and order as 1, 2, 3 principal components.
@@ -178,12 +182,14 @@ To show the PCA of units: Select units, and use the slider to select channels fo
 .. code-block::
    xl.pca_analysis(dataObj)
 
+The GUI looks like::
+
 .. image:: fig/pca_widget.png
   :width: 400
   :alt: pca widget
 
 .. image:: fig/pca.png
-  :width: 400
+  :width: 600
   :alt: PCA
 
 To show the raster plot, ISI and histogram of units:
@@ -191,8 +197,10 @@ To show the raster plot, ISI and histogram of units:
 .. code-block::
    xl.histogram_widget(dataObj)
 
+The GUI looks like:
+
 .. image:: fig/raster_widget.png
-  :width: 400
+  :width: 600
   :alt: raster widget
 
 Connectome analysis
@@ -205,10 +213,12 @@ To measure the functional connection between units
 .. code-block::
    xl.Connection_analysis(dataObj)
 
+The GUI looks like:
+
 .. image:: fig/connection_widget.png
-  :width: 400
+  :width: 600
   :alt: connection widget
 
 .. image:: fig/connectivity.png
-  :width: 400
+  :width: 600
   :alt: neuron connectivity
