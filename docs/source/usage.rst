@@ -96,7 +96,7 @@ Load dataset
 
 .. note::
 
-   This part is adapted from `document<https://docs.google.com/document/d/1ORTekIBW8jfAY2d3LeadNTPgP2iLAiqHvzxm37mait0/edit>`_ written by Jay
+   This part is adapted from `document <https://docs.google.com/document/d/1ORTekIBW8jfAY2d3LeadNTPgP2iLAiqHvzxm37mait0/edit>`_ written by Jay
 
 
 The parameters of dataset is stored in `chamLabRecordingVariables.xlsx <https://drive.google.com/drive/folders/1fpUvxR17hc5CaAnXwgyjzDOEguGLr4Bh?usp=sharing>`_.
