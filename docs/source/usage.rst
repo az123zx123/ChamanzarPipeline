@@ -188,7 +188,7 @@ To show the PCA of units: Select units, and use the slider to select channels fo
 
    xl.pca_analysis(dataObj)
 
-The GUI looks like::
+The GUI looks like:
 
 .. image:: fig/pca_widget.png
   :width: 600
