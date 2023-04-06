@@ -103,7 +103,7 @@ The parameters of dataset is stored in `chamLabRecordingVariables.xlsx <https://
 The following is an example of loading one dataset. :code:`dataInd` is the index into the spike sorting variables sheet that you have recently edited. :code:`Filedir` must be set to the target sheet. The remaining variables are sorting parameters. 
 The final two lines, :code:`dataObj.loadMountainSort()` and :code:`dataObj.loadVariables()` performs the filtering and spike sorting and loads the results into memory. These can take a long time to execute on the first time for a given dataset. However, the results are cached and can be quickly loaded into memory once the operation has been run once. 
 
-.. code-block::
+.. code-block:: python
 
    dataInd = 121
    spikeProminence = 10
@@ -125,7 +125,7 @@ Processing and visualizations
 -----------------------------
 The pipeline is based on `SpikeInterface <https://spikeinterface.readthedocs.io/en/latest/>`_ framework. spikeinterface has implemented some useful processing and visualizations.
 
-.. code-block::
+.. code-block:: python
 
    sw.plot_unit_waveforms(sorting=dataObj.sorting_MS4, 
                            recording=dataObj.recording,
@@ -142,14 +142,17 @@ We also implement our version of processing and visualizations
 Some GUI-based processing and visualizations are available. 
 To enable the custom GUI functions, some additional libraries should be installed.
 
-.. code-block::
+.. code-block:: python
+
    !pip install ipympl
    !pip install ipyfilechooser
    import xianglib as xl
 
 
 The warnings can be disabled:
-.. code-block::
+
+.. code-block:: python
+
    import warnings
    warnings.filterwarnings('ignore')
 
@@ -157,49 +160,58 @@ In order to select multiple items, Hold down the control key and select.
 
 To show the templates, waveforms of units: The first column is unit list, second column is channel list and the last dropdown select template and waveform.
 
-.. code-block::
+.. code-block:: python
+
    xl.waveform_widget(dataObj)
 
 The GUI looks like:
 
 .. image:: fig/waveform_widget.png
+
   :width: 600
   :alt: waveform widget
 
 To plot the autocorrelation and crosscorrelation of units: The first is unit list, bin size and window size are in the unit of second(s). The last dropdown select autocorrelation and crosscorrelation.  
 
-.. code-block::
+.. code-block:: python
+
    xl.correlation_widget(dataObj)
 
 The GUI looks like:
 
 .. image:: fig/cross_widget.png
+
   :width: 600
   :alt: correlation widget
 
 To show the PCA of units: Select units, and use the slider to select channels for each axis. The dropdown corresponds to which principal component will be plot. A common practice is selecting the maximum channels and order as 1, 2, 3 principal components.
 
-.. code-block::
+.. code-block:: python
+
    xl.pca_analysis(dataObj)
 
 The GUI looks like::
 
 .. image:: fig/pca_widget.png
+
   :width: 400
   :alt: pca widget
 
 .. image:: fig/pca.png
+
   :width: 600
   :alt: PCA
 
 To show the raster plot, ISI and histogram of units:
 
-.. code-block::
+.. code-block:: python
+
    xl.histogram_widget(dataObj)
 
 The GUI looks like:
 
 .. image:: fig/raster_widget.png
+
   :width: 600
   :alt: raster widget
 
@@ -210,15 +222,18 @@ Connectome analysis
 
 To measure the functional connection between units
 
-.. code-block::
+.. code-block:: python 
+
    xl.Connection_analysis(dataObj)
 
 The GUI looks like:
 
 .. image:: fig/connection_widget.png
+
   :width: 600
   :alt: connection widget
 
 .. image:: fig/connectivity.png
+   
   :width: 600
   :alt: neuron connectivity
