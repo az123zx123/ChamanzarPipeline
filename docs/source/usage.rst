@@ -191,7 +191,7 @@ To show the PCA of units: Select units, and use the slider to select channels fo
 The GUI looks like::
 
 .. image:: fig/pca_widget.png
-  :width: 400
+  :width: 600
   :alt: pca widget
 
 .. image:: fig/pca.png
