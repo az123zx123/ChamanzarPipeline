@@ -124,6 +124,7 @@ The final two lines, :code:`dataObj.loadMountainSort()` and :code:`dataObj.loadV
 Processing and visualizations
 -----------------------------
 The pipeline is based on `SpikeInterface <https://spikeinterface.readthedocs.io/en/latest/>`_ framework. spikeinterface has implemented some useful processing and visualizations.
+
 .. code-block::
 
    sw.plot_unit_waveforms(sorting=dataObj.sorting_MS4, 
@@ -132,6 +133,7 @@ The pipeline is based on `SpikeInterface <https://spikeinterface.readthedocs.io/
                            max_spikes_per_unit=100)
 
 We also implement our version of processing and visualizations
+
 .. code-block::
 
    dataObj.visualize("waveforms", version = "original", overide = False) #unit wavesforms
@@ -139,31 +141,74 @@ We also implement our version of processing and visualizations
 
 Some GUI-based processing and visualizations are available. 
 To enable the custom GUI functions, some additional libraries should be installed.
+
 .. code-block::
    !pip install ipympl
    !pip install ipyfilechooser
    import xianglib as xl
 
+
+The warnings can be disabled:
+.. code-block::
+   import warnings
+   warnings.filterwarnings('ignore')
+
 In order to select multiple items, Hold down the control key and select.
 
 To show the templates, waveforms of units: The first column is unit list, second column is channel list and the last dropdown select template and waveform.
+
 .. code-block::
    xl.waveform_widget(dataObj)
 
+.. image:: fig/waveform_widget.png
+  :width: 400
+  :alt: waveform widget
+
 To plot the autocorrelation and crosscorrelation of units: The first is unit list, bin size and window size are in the unit of second(s). The last dropdown select autocorrelation and crosscorrelation.  
+
 .. code-block::
    xl.correlation_widget(dataObj)
 
+.. image:: fig/cross_widget.png
+  :width: 400
+  :alt: correlation widget
+
 To show the PCA of units: Select units, and use the slider to select channels for each axis. The dropdown corresponds to which principal component will be plot. A common practice is selecting the maximum channels and order as 1, 2, 3 principal components.
+
 .. code-block::
    xl.pca_analysis(dataObj)
 
+.. image:: fig/pca_widget.png
+  :width: 400
+  :alt: pca widget
+
+.. image:: fig/pca.png
+  :width: 400
+  :alt: PCA
+
 To show the raster plot, ISI and histogram of units:
+
 .. code-block::
    xl.histogram_widget(dataObj)
+
+.. image:: fig/raster_widget.png
+  :width: 400
+  :alt: raster widget
 
 Connectome analysis
 -------------------
 .. note::
    This is an experimental function and could result in run out of memory error. Please stop the process if not updated for more than 10 mins.
 
+To measure the functional connection between units
+
+.. code-block::
+   xl.Connection_analysis(dataObj)
+
+.. image:: fig/connection_widget.png
+  :width: 400
+  :alt: connection widget
+
+.. image:: fig/connectivity.png
+  :width: 400
+  :alt: neuron connectivity
